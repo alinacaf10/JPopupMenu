@@ -18,6 +18,30 @@ public class Main {
         pm.add(m2);
         pm.add(m3);
 
+        frame.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                pm.show(frame,frame.getX(),frame.getY());
+            }
+        });
+        m1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(frame,"Cut");
+            }
+        });
+        m2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(frame,"Copy");
+            }
+        });
+        m3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(frame,"Paste");
+            }
+        });
 
 
         frame.setSize(400,400);
